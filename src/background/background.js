@@ -1,4 +1,4 @@
-import Tab from './tab.js';
+import Tab from './module/tab.js';
 
 var timer = 0;
 var elapsedTime = 0;
