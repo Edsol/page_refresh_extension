@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Amazon vine extension</title>
+
+  <link rel="stylesheet" href="../../library/picnic/picnic.min.css">
+  <style type="text/css">
+    #mainPopup {
+      padding: 5px;
+      height: 300px;
+      width: 600px;
+      font-family: Helvetica, Ubuntu, Arial, sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .execButton {
+      margin-top: 15px;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <div id="mainPopup">
+    <div class="">
+      <h1>Timer: <span id="secCountdown">00</span> sec</h1>
+      Scelta rapida:
+      <div class='mb-2'>
+        <button class="button toggle success quickSec" data-time="10">10 sec</button>
+        <button class='button toggle success quickSec' data-time="20">20 sec</button>
+        <button class='button toggle success quickSec' data-time="30">30 sec</button>
+        <button class='button toggle success quickSec' data-time="60">60 sec</button>
+      </div>
+      <hr>
+
+      
+      <div class="flex">
+        <div class="">
+          <label for="numberInput">Manuale (3 - 60):</label>
+          <input type="number" id="numberInput" value="0" min="3" max="60" readonly>
+        </div>
+        <div class="">
+          <label for="type">Tipo</label>
+          <select name="type" id="type" readonly="readonly">
+            <option value="sec" disabled>Secondi</option>
+            <option value="min" disabled>Minuti</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" id="randomize" checked>
+          <span class="checkable">Genera timer casuale</span>
+        </label>
+      </div>
+
+      <div class="execButton">
+        <button id="start" class="success">Avvia</button>
+        <button id="stop" class="error" disabled>Stop</button>
+        <button id="reset" class="warning" disabled>Reset</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

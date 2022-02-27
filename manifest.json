@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "PageRefresh",
+    "version": "0.0.1",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/16x16.png"
+        },
+        "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "/thirdParty/jquery-3.5.1.min.js"
+            ]
+        }
+    ]
+}
