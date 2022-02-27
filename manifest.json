@@ -19,8 +19,12 @@
     },
     "content_scripts": [
         {
-            "js": [
-                "/thirdParty/jquery-3.5.1.min.js"
+            "matches": [
+                "https://*/*",
+                "file://*"
+            ],
+            "css": [
+                "library/picnic/picnic.min.css"
             ]
         }
     ]
